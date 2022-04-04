@@ -49,7 +49,7 @@ class Converter:
 
         # Remove euro sign, transform string formatted costs into float
         self.__output_df['Bedrag'] = self.__output_df[self.__output_cols[5]].str.replace(
-            'â‚¬', '').str.replace(',', '.').astype(float)
+            '€', '').str.replace(',', '.').astype(float)
 
         if self.__name != None:
             self.__output_df[self.__output_cols[10]] = self.__name
